@@ -1,0 +1,28 @@
+Queue coaster;
+        fin >> group1 >> size1;   // capture two group inputs
+        fin >> group2 >> size2;
+
+        if ( group1.empty() )     // if group1 is empty, no more inputs left, end loop
+        {
+            validate = true;
+            break;
+        }
+
+        if ( size1 <= seats && size1+size2 > seats )
+        {
+            // if group1 and only group 1 can fit
+            train++;
+            cout << "Train #" << endl << train;
+            cout << "-----------------" << endl;
+            for ( int i = 0; i <= size1; i++ )
+            {
+                coaster.enqueue( group1 );
+
+            }
+            for ( int i = 0; i <= size1; i++ )
+            {
+                cout << group1 << " " << i << endl;
+            }
+        }
+
+        if ( size1+size2 )
